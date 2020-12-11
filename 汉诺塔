@@ -1,0 +1,18 @@
+#include<stdio.h>
+void hannuota(int n,char a,char b,char c)
+{
+    if(n==1)
+        printf("%c--%c",a,c);
+      else
+      {
+      hannuota(n-1,a,c,b);
+      printf("%c--%c",a,c);
+      hannuota(n-1,b,a,c);
+}
+}
+int mian()
+{
+  int n;
+  hannuota(n,'a','b','c');
+  return 0;
+  }
